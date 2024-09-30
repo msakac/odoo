@@ -42,6 +42,7 @@ export class TableGuestsButton extends Component {
             }
 
             if (guestCount == 0 && this.currentOrder.orderlines.length === 0) {
+                this.currentOrder.locked = true;
                 this.pos.removeOrder(this.currentOrder);
                 this.pos.showScreen("FloorScreen");
             }
